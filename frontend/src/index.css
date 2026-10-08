@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.light .glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(241, 245, 249, 0.85) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.06);
+}
+
+.glass-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 12px 40px -8px rgba(139, 92, 246, 0.25);
+}
+
+.neon-border {
+  position: relative;
+}
+
+.neon-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4, #ec4899);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.neon-border:hover::before {
+  opacity: 0.8;
+}
+
+/* Category gradients */
+.gradient-technology { background: linear-gradient(135deg, #06b6d4, #3b82f6); }
+.gradient-aiml { background: linear-gradient(135deg, #8b5cf6, #d946ef); }
+.gradient-cybersecurity { background: linear-gradient(135deg, #ef4444, #f43f5e); }
+.gradient-business { background: linear-gradient(135deg, #10b981, #059669); }
+.gradient-startups { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.gradient-science { background: linear-gradient(135deg, #6366f1, #0ea5e9); }
+.gradient-health { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+.gradient-sports { background: linear-gradient(135deg, #f97316, #eab308); }
+.gradient-entertainment { background: linear-gradient(135deg, #a855f7, #ec4899); }
+.gradient-world { background: linear-gradient(135deg, #2563eb, #0d9488); }
+.gradient-india { background: linear-gradient(135deg, #ea580c, #16a34a); }
+.gradient-politics { background: linear-gradient(135deg, #475569, #1e293b); }
+.gradient-gaming { background: linear-gradient(135deg, #d946ef, #06b6d4); }
+.gradient-education { background: linear-gradient(135deg, #14b8a6, #0284c7); }
